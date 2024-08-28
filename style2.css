@@ -1,0 +1,215 @@
+/* Keyframes for various animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1C1C1C; /* Dark background */
+    color: #D4AF37; /* Gold color matching logo */
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2E2E2E; /* Darker shade of background */
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    animation: bounceIn 2s ease-in-out;
+}
+
+.logo-placeholder {
+    width: 180px; /* Placeholder size for the logo */
+    height: 100px;
+    background-color: #D4AF37; /* Gold color */
+    margin-right: 10px;
+    border: 0.3rem solid #D4AF37;
+    border-radius: 0.7rem;
+}
+
+.logo-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #D4AF37; /* Gold color */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    animation: slideInFromTop 1.5s ease-in-out;
+}
+
+nav a {
+    color: #D4AF37; /* Gold color */
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #1C1C1C; /* Matching dark background */
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #3E3E3E; /* Slightly lighter background for hover effect */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    animation: slideInFromBottom 2s ease-in-out;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #D4AF37; /* Gold border */
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+    outline: none;
+    color: #2E2E2E; /* Dark text inside search bar */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-bar:focus {
+    border-color: #E3C565;
+    box-shadow: 0 0 10px #E3C565;
+}
+
+.search-button {
+    padding: 10px;
+    border: 1px solid #D4AF37; /* Gold border */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+    background-color: #D4AF37; /* Gold background */
+    color: #2E2E2E; /* Dark text color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+    background-color: #E3C565; /* Slightly darker gold for hover effect */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four cards per row */
+    gap: 20px;
+    margin: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.card {
+    background-color: #2E2E2E; /* Darker background for cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: zoomIn 2s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Ensure content aligns properly */
+    justify-content: space-between; /* Space between content and button */
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #D4AF37; /* Gold text color */
+}
+
+.subscribe-button {
+    margin-top: auto; /* Pushes button to the bottom of the card */
+    padding: 10px 20px;
+    background-color: #D4AF37; /* Gold background */
+    border: none;
+    color: #2E2E2E; /* Dark text color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #E3C565; /* Slightly darker gold for hover effect */
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #2E2E2E; /* Darker background for footer */
+    color: #D4AF37; /* Gold color */
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    animation: slideInFromBottom 1s ease-in-out;
+}
